@@ -1,4 +1,4 @@
-add_library(tests)
+add_executable(tests)
 
 target_sources(
     tests PRIVATE
