@@ -20,7 +20,7 @@
  *
  * This forces compiler to inline function body at every invocation point
  * in current translation unit.
- * 
+ *
  * Use with *ultimate care* and when you *absolutely have to*.
  * Abuse of force inlining might produce performace degradation (due to cache misses).
  */
@@ -40,7 +40,7 @@
 #endif
 
 /* Declares `force_inline` convenience macros. */
-#if !defined force_inline && !define NOLIBC_NO_FORCE_INLINE
+#if !defined force_inline && !defined NOLIBC_NO_FORCE_INLINE
      #define force_inline \
         _Force_inline
 
