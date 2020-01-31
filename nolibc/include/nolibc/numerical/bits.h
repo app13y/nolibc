@@ -17,10 +17,4 @@ enum {
     /// @note
     /// Useful for computing the dimensions of byte-mapping tables.
     _Bytes_count = (1 << _Bits_in_byte),
-
-    /// Maximum byte value.
-    ///
-    /// @note
-    /// Useful for checking the ranges of values that are expected to fit in a byte.
-    _Maximum_byte = (_Bytes_count - 1),
 };

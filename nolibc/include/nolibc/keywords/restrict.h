@@ -11,7 +11,7 @@
 
 /* None of MSVC toolsets recognise this keyword in C mode,
  * MSDN suggests __restrict specifier.
- * 
+ *
  * See https://docs.microsoft.com/en-us/cpp/cpp/extension-restrict?view=vs-2017.
  */
 #if _COMPILER_IS_MSVC && !defined restrict

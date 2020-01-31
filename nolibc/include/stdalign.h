@@ -1,4 +1,4 @@
 #pragma once
 
-#include <nolibc/alignas.h>
-#include <nolibc/alignof.h>
+#include <nolibc/keywords/alignas.h>
+#include <nolibc/keywords/alignof.h>
