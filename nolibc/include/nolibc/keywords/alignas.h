@@ -10,25 +10,26 @@
     /* We do nothing, `alignas` is a keyword. */
 
 #else
-    /* We define `alignas` manually. */
-    #if !defined _Alignas
+    #if !defined _Align_as
         #if _COMPILER_IS_MSVC
-            #define _Alignas(boundary) \
+            #define _Align_as(boundary) \
                 __declspec(align(boundary))
 
         #elif _COMPILER_IS_GCC || _COMPILER_IS_CLANG || _COMPILER_IS_ICC
-            #define _Alignas(boundary) \
+            #define _Align_as(boundary) \
                 __attribute__((__aligned__(boundary)))
 
         #endif
+
     #endif
 
     /* Defines `alignas` convenience macro. */
     #if !defined alignas && !define NOLIBC_NO_ALIGNAS
         #define alignas \
-            _Alignas
+            _Align_as
 
         #define __alignas_is_defined 1
 
     #endif
+
 #endif

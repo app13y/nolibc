@@ -1,11 +1,11 @@
 function(add_tests suite)
   foreach(test IN LISTS ARGN)
     get_filename_component(test_name ${test} NAME_WE)
-    message(STATUS "test: ${test}")
-    message(STATUS "test name: ${test_name}")
+
     add_executable(${test_name} ${test})
     target_link_libraries(${test_name} nolibc)
-    add_test(${test_name} ${test_name})
+
+    add_test(${suite}/${test_name} ${test_name})
   endforeach()
 endfunction()
 

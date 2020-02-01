@@ -11,21 +11,22 @@
     /* We do nothing, `alignof` is a keyword. */
 
 #else
-    /* We define `alignof` manually. */
-    #if !defined _Alignof
+    #if !defined _Alignment_of
         #if _COMPILER_IS_MSVC || _COMPILER_IS_GCC || _COMPILER_IS_CLANG || _COMPILER_IS_ICC
-            #define _Alignof(what) \
+            #define _Alignment_of(what) \
                 __alignof(what)
 
         #endif
+
     #endif
 
     /* Defines `alignas` convenience macro. */
     #if !defined alignof && !define NOLIBC_NO_ALIGNOF
         #define alignof \
-            _Alignof
+            _Alignment_of
 
         #define __alignof_is_defined 1
 
     #endif
+
 #endif

@@ -37,6 +37,7 @@
         #define _Force_inline
 
     #endif
+
 #endif
 
 /* Declares `force_inline` convenience macros. */
