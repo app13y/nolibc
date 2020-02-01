@@ -3,6 +3,8 @@
 int main(
     void
 ) {
-    memset(NULL, 0x00, 0);
+    unsigned char dummy;
+
+    memset(&dummy, 0x00, sizeof(dummy));
     return 0;
 }

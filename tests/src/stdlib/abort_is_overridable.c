@@ -1,13 +1,11 @@
 #define NOLIBC_OVERRIDE_ABORT
 
 #include <stdlib.h>
-#include <stdio.h>
-#include <stdnoreturn.h>
 #include <stdbool.h>
 
 static bool does_call_abort_override = false;
 
-noreturn void
+void
 abort_override(
     void
 ) {

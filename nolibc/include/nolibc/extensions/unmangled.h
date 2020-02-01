@@ -19,7 +19,7 @@
 #endif
 
 /* Defines `unmangled` convenience macro. */
-#if !defined unmangled && !define NOLIBC_NO_UNMANGLED
+#if !defined unmangled && !defined NOLIBC_NO_UNMANGLED
     #define unmangled \
         _Unmangled
 

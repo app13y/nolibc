@@ -1,15 +1,14 @@
 #pragma once
 
 #include <nolibc/keywords/inline.h>
-#include <nolibc/keywords/noreturn.h>
 #include <nolibc/extensions/unmangled.h>
 
-noreturn static inline void
+static inline void
 abort(
     void
 ) {
     #if defined NOLIBC_OVERRIDE_ABORT
-        _Unmangled noreturn static inline void
+        unmangled void
         abort_override(
             void
         );

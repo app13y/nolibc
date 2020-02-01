@@ -2,6 +2,8 @@
 
 #include <nolibc/extensions/stringify.h>
 #include <nolibc/errors/handlers/ignore.h>
+#include <nolibc/numerical/limits.h>
+#include <nolibc/types/errno.h>
 
 #define _Location \
     __FILE__ ":" _Stringify(__LINE__)
@@ -47,10 +49,10 @@
     _Stringify(value) " was not a power of 2")
 
 #define _Check_range(cnd, msg) \
-    _Check((cnd), c_range_error_handler, c_error_out_of_range, (msg))
+    _Check((cnd), ERANGE, (msg))
 
 #define _Check_valid_size(value) \
-    _Check_range((value) < _Maximum_size, \
+    _Check_range((value) < _Maximum_sane_size, \
     _Stringify(value) " is not a valid size value")
 
 #define _Check_in_range(value, low, high) \
