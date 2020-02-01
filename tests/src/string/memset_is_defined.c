@@ -4,4 +4,5 @@ int main(
     void
 ) {
     memset(NULL, 0x00, 0);
+    return 0;
 }
