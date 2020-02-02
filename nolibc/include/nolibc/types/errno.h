@@ -6,6 +6,7 @@
 
 typedef
     enum {
+        EOK = 0,
         EPERM = 1,
         ENOENT = 2,
         ESRCH = 3,

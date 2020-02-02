@@ -40,4 +40,5 @@ memcpy_s(
     _Check_less_or_equal(count, dst_size);
 
     memcpy(dst, src, count);
+    return EOK;
 }
