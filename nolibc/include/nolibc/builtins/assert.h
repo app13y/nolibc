@@ -12,22 +12,23 @@ _Assert(
     const char * restrict expression,
     const char * restrict location
 ) {
-    if (!condition) {
-        #if defined NOLIBC_OVERRIDE_ASSERT
-            (void) expression;
-            (void) location;
+    #if defined NOLIBC_OVERRIDE_ASSERT
+        (void) expression;
+        (void) location;
 
-            _Unmangled void
-            assert_override(
-                bool condition
-            );
+        _Unmangled void
+        assert_override(
+            bool condition
+        );
 
-            assert_override(condition);
+        assert_override(condition);
 
-        #else
+    #else
+        if (!condition) {
             //fprintf(stderr, "Assertion failed:\n\t%s\n\t%s\n", expression, location);
             abort();
+        }
 
-        #endif
-    }
+    #endif
+
 }

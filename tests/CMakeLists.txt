@@ -10,6 +10,10 @@ function(add_tests suite)
 endfunction()
 
 add_tests(nolibc
+  src/assert/assert_calls_abort.c
+  src/assert/assert_is_defined.c
+  src/assert/assert_is_overridable.c
+  src/assert/assert_respects_ndebug.c
   src/stddef/null_is_defined.c
   src/stdlib/abort_is_defined.c
   src/stdlib/abort_is_overridable.c
