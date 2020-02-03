@@ -1,4 +1,5 @@
-#define NOLIBC_OVERRIDE_ASSERT
+#define assert \
+    custom_assert
 
 #include <nolibc/predefined/build_flavour.h>
 #include <assert.h>
@@ -6,12 +7,8 @@
 
 static int number_of_calls = 0;
 
-void
-assert_override(
-    bool condition
-) {
+void custom_assert(bool condition) {
     (void) condition;
-
     ++number_of_calls;
 }
 
