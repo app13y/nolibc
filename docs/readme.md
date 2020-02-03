@@ -14,7 +14,10 @@ to facilitate most needs a lean binary might have.
 
 ### Standard library headers
 
-- [X] `errno.h` (with `errno_t` alias and `EOK` value),
+- [X] `errno.h`:
+    - `errno_t` type alias,
+    - basic errno codes including `EOK`,
+    - `strerror` and `strerror_s` functions;
 - [ ] `limits.h` (has `CHAR_BIT` and `RSIZE_MAX` only),
 - [X] `stdalign.h`,
 - [X] `stdbool.h`,
