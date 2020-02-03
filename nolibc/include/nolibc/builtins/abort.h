@@ -8,7 +8,7 @@ abort(
     void
 ) {
     #if defined NOLIBC_OVERRIDE_ABORT
-        unmangled void
+        _Unmangled void
         abort_override(
             void
         );

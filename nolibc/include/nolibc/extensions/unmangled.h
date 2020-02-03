@@ -17,10 +17,3 @@
     #endif
 
 #endif
-
-/* Defines `unmangled` convenience macro. */
-#if !defined unmangled && !defined NOLIBC_NO_UNMANGLED
-    #define unmangled \
-        _Unmangled
-
-#endif

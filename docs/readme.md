@@ -14,6 +14,8 @@ to facilitate most needs a lean binary might have.
 
 ### Standard library headers
 
+- `assert.h`:
+    - overridable `assert` macro;
 - `errno.h`:
     - `errno_t` type alias,
     - basic errno codes including `EOK`,

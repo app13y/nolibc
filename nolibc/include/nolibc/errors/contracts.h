@@ -1,12 +1,11 @@
 #pragma once
 
 #include <nolibc/extensions/stringify.h>
+#include <nolibc/extensions/location.h>
 #include <nolibc/errors/handlers/ignore.h>
 #include <nolibc/numerical/limits.h>
 #include <nolibc/types/errno.h>
 
-#define _Location \
-    __FILE__ ":" _Stringify(__LINE__)
 
 #define _Check(cnd, error, msg) { \
     if (!(cnd)) \
