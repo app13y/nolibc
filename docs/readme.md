@@ -14,14 +14,27 @@ to facilitate most needs a lean binary might have.
 
 ### Standard library headers
 
-- [X] `errno.h`:
+- `errno.h`:
     - `errno_t` type alias,
     - basic errno codes including `EOK`,
     - `strerror` and `strerror_s` functions;
-- [ ] `limits.h` (has `CHAR_BIT` and `RSIZE_MAX` only),
-- [X] `stdalign.h`,
-- [X] `stdbool.h`,
-- [ ] `stddef.h`,
-- [ ] `stdlib.h`,
-- [X] `stdnoreturn.h`,
-- [ ] `string.h` (does not support some functions).
+- `limits.h`:
+    - `CHAR_BIT`,
+    - `RSIZE_MAX` for probabilistic validation of `size_t` values;
+- `stdalign.h`:
+    - `alignof`, `alignas`, etc.;
+- `stdbool.h`:
+    - `bool` type,
+    - `true` and `false` boolean values;
+- `stddef.h`:
+    - `NULL`,
+    - `size_t` and `rsize_t` standard types;
+- `stdlib.h`:
+    - overridable `abort` function,
+    - `constraint_handler_t` type;
+- `stdnoreturn.h`:
+    - `noreturn` function qualifier;
+- `string.h`:
+    - `memcpy`, and `memcpy_s`,
+    - `memset`,
+    - `strlen`.
