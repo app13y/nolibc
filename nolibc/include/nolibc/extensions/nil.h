@@ -15,10 +15,3 @@
     #endif
 
 #endif
-
-/* Defines `nil` convenience macro. */
-#if !defined nil && !defined NOLIBC_NO_NIL
-    #define nil \
-        _Nil
-
-#endif
