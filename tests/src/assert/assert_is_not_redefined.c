@@ -19,10 +19,7 @@ main(
     assert(true);
     assert(false);
 
-    const int expected_number_of_calls = _BUILD_FLAVOUR_IS_DEBUG
-        ? 2
-        : 0;
-
+    const int expected_number_of_calls = 2;
     return (number_of_calls == expected_number_of_calls)
         ? 0
         : 1;

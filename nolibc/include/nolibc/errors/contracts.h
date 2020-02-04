@@ -1,16 +1,14 @@
 #pragma once
 
+#include <nolibc/builtins/assert.h>
 #include <nolibc/extensions/stringify.h>
 #include <nolibc/extensions/location.h>
 #include <nolibc/errors/handlers/ignore.h>
 #include <nolibc/numerical/limits.h>
 #include <nolibc/types/errno.h>
 
-
-#define _Check(cnd, error, msg) { \
-    if (!(cnd)) \
-        _Ignore((msg), _Location, (error)); \
-}
+#define _Check(cnd, error, msg) \
+    _Assert((cnd), (msg), _Location)
 
 #define _Check_allocated(ptr) \
     _Check((ptr), ENOMEM, \
