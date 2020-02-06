@@ -6,45 +6,112 @@ static inline const char *
 strerror(
     int errnum
 ) {
-    static const char *
-    descriptions[] = {
-        [EPERM] = "Operation not permitted",
-        [ENOENT] = "No such file or directory",
-        [ESRCH] = "No such process",
-        [EINTR] = "Interrupted system call",
-        [EIO] = "I/O error",
-        [ENXIO] = "No such device or address",
-        [E2BIG] = "Argument list too long",
-        [ENOEXEC] = "Exec format error",
-        [EBADF] = "Bad file number",
-        [ECHILD] = "No child processes",
-        [EAGAIN] = "Try again",
-        [ENOMEM] = "Out of memory",
-        [EACCES] = "Permission denied",
-        [EFAULT] = "Bad address",
-        [ENOTBLK] = "Block device required",
-        [EBUSY] = "Device or resource busy",
-        [EEXIST] = "File exists",
-        [EXDEV] = "Cross-device link",
-        [ENODEV] = "No such device",
-        [ENOTDIR] = "Not a directory",
-        [EISDIR] = "Is a directory",
-        [EINVAL] = "Invalid argument",
-        [ENFILE] = "File table overflow",
-        [EMFILE] = "Too many open files",
-        [ENOTTY] = "Not a typewriter",
-        [ETXTBSY] = "Text file busy",
-        [EFBIG] = "File too large",
-        [ENOSPC] = "No space left on device",
-        [ESPIPE] = "Illegal seek",
-        [EROFS] = "Read-only file system",
-        [EMLINK] = "Too many links",
-        [EPIPE] = "Broken pipe",
-        [EDOM] = "Math argument out of domain of func",
-        [ERANGE] = "Math result not representable",
-    };
+    switch (errnum) {
+        case EPERM:
+            return "Operation not permitted";
 
-    return descriptions[errnum];
+        case ENOENT:
+            return "No such file or directory";
+
+        case ESRCH:
+            return "No such process";
+
+        case EINTR:
+            return "Interrupted system call";
+
+        case EIO:
+            return "I/O error";
+
+        case ENXIO:
+            return "No such device or address";
+
+        case E2BIG:
+            return "Argument list too long";
+
+        case ENOEXEC:
+            return "Exec format error";
+
+        case EBADF:
+            return "Bad file number";
+
+        case ECHILD:
+            return "No child processes";
+
+        case EAGAIN:
+            return "Try again";
+
+        case ENOMEM:
+            return "Out of memory";
+
+        case EACCES:
+            return "Permission denied";
+
+        case EFAULT:
+            return "Bad address";
+
+        case ENOTBLK:
+            return "Block device required";
+
+        case EBUSY:
+            return "Device or resource busy";
+
+        case EEXIST:
+            return "File exists";
+
+        case EXDEV:
+            return "Cross-device link";
+
+        case ENODEV:
+            return "No such device";
+
+        case ENOTDIR:
+            return "Not a directory";
+
+        case EISDIR:
+            return "Is a directory";
+
+        case EINVAL:
+            return "Invalid argument";
+
+        case ENFILE:
+            return "File table overflow";
+
+        case EMFILE:
+            return "Too many open files";
+
+        case ENOTTY:
+            return "Not a typewriter";
+
+        case ETXTBSY:
+            return "Text file busy";
+
+        case EFBIG:
+            return "File too large";
+
+        case ENOSPC:
+            return "No space left on device";
+
+        case ESPIPE:
+            return "Illegal seek";
+
+        case EROFS:
+            return "Read-only file system";
+
+        case EMLINK:
+            return "Too many links";
+
+        case EPIPE:
+            return "Broken pipe";
+
+        case EDOM:
+            return "Math argument out of domain of func";
+
+        case ERANGE:
+            return "Math result not representable";
+
+        default:
+            return "Unknown error";
+    }
 }
 
 static inline size_t
