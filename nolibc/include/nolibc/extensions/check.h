@@ -1,11 +1,9 @@
 #pragma once
 
-#include <nolibc/builtins/assert.h>
 #include <nolibc/extensions/stringify.h>
 #include <nolibc/extensions/location.h>
-#include <nolibc/errors/handlers/ignore.h>
+#include <nolibc/builtins/assert.h>
 #include <nolibc/numerical/limits.h>
-#include <nolibc/types/errno.h>
 
 #define _Check(cnd, error, msg) \
     _Assert((cnd), (msg), _Location)

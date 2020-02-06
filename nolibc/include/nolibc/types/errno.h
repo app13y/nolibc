@@ -1,8 +1,6 @@
 #pragma once
 
 #include <nolibc/builtins/strlen.h>
-#include <nolibc/keywords/inline.h>
-#include <nolibc/types/size.h>
 
 typedef
     enum {

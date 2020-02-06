@@ -1,11 +1,9 @@
 #pragma once
 
-#include <nolibc/keywords/inline.h>
-#include <nolibc/keywords/restrict.h>
+#include <nolibc/extensions/check.h>
 #include <nolibc/types/size.h>
 #include <nolibc/types/rsize.h>
 #include <nolibc/types/errno.h>
-#include <nolibc/errors/contracts.h>
 
 static inline void *
 memcpy(

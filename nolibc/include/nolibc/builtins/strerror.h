@@ -1,6 +1,5 @@
 #pragma once
 
-#include <nolibc/keywords/inline.h>
 #include <nolibc/types/errno.h>
 
 static inline const char *

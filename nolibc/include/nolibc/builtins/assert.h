@@ -1,14 +1,11 @@
 #pragma once
 
-#include <nolibc/keywords/inline.h>
-#include <nolibc/keywords/restrict.h>
-#include <nolibc/builtins/abort.h>
 #include <nolibc/extensions/unmangled.h>
-#include <nolibc/types/boolean.h>
+#include <nolibc/builtins/abort.h>
 
 static inline void
 _Assert(
-    bool condition,
+    _Bool condition,
     const char * restrict expression,
     const char * restrict location
 ) {

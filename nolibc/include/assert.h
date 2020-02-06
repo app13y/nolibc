@@ -1,6 +1,7 @@
 #pragma once
 
 #include <nolibc/builtins/assert.h>
+#include <nolibc/keywords/static_assert.h>
 #include <nolibc/extensions/stringify.h>
 #include <nolibc/extensions/location.h>
 #include <nolibc/predefined/build_flavour.h>
@@ -15,5 +16,11 @@
             (void) (expr)
 
     #endif
+
+#endif
+
+#if !defined static_assert && !defined NOLIBC_NO_STATIC_ASSERT
+    #define static_assert \
+        _Static_assert
 
 #endif

@@ -1,6 +1,5 @@
 #pragma once
 
-#include <nolibc/keywords/restrict.h>
 #include <nolibc/types/errno.h>
 
 #if !defined NOLIBC_NO_CONSTRAINT_HANDLER

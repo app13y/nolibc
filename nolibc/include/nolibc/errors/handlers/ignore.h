@@ -1,7 +1,5 @@
 #pragma once
 
-#include <nolibc/keywords/inline.h>
-#include <nolibc/keywords/restrict.h>
 #include <nolibc/types/constraint_handler.h>
 #include <nolibc/types/errno.h>
 

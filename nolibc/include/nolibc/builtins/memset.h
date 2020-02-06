@@ -1,6 +1,6 @@
 #pragma once
 
-#include <nolibc/keywords/inline.h>
+#include <nolibc/extensions/check.h>
 #include <nolibc/types/size.h>
 
 static inline void *
@@ -9,7 +9,8 @@ memset(
     int chr,
     size_t count
 ) {
-    // todo: check arguments
+    _Check_addressable(dst, count);
+    _Check_in_range(chr, 0x00, 0xff);
 
     unsigned char *dst_enumerable = (unsigned char *) dst;
 
