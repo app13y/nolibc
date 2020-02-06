@@ -1,7 +1,6 @@
 #pragma once
 
 #include <nolibc/builtins/assert.h>
-#include <nolibc/keywords/static_assert.h>
 #include <nolibc/extensions/stringify.h>
 #include <nolibc/extensions/location.h>
 #include <nolibc/predefined/build_flavour.h>

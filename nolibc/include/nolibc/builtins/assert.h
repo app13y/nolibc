@@ -15,7 +15,7 @@ _Assert(
 
         _Unmangled void
         assert_override(
-            bool condition
+            _Bool condition
         );
 
         assert_override(condition);
