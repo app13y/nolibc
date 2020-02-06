@@ -16,6 +16,7 @@ to facilitate most needs a lean binary might have.
 
 - `assert.h`:
     - overridable `assert` macro;
+    - overridable `static_assert` macro;
 - `errno.h`:
     - `errno_t` type alias,
     - basic errno codes including `EOK`,

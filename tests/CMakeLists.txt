@@ -14,6 +14,8 @@ add_tests(nolibc
   src/assert/assert_is_not_redefined.c
   src/assert/assert_is_overridable.c
   src/assert/assert_respects_ndebug.c
+  src/assert/static_assert_is_defined.c
+  src/assert/static_assert_is_not_redefined.c
   src/stddef/null_is_defined.c
   src/stdlib/abort_is_defined.c
   src/string/memset_is_defined.c
