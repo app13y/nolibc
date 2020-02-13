@@ -11,10 +11,4 @@ enum {
     /// @see
     /// `CHAR_BIT`
     _Bits_in_byte = 8,
-
-    /// Number of different values a byte has.
-    ///
-    /// @note
-    /// Useful for computing the dimensions of byte-mapping tables.
-    _Bytes_count = (1 << _Bits_in_byte),
 };
