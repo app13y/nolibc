@@ -1,10 +1,11 @@
 #define static_assert \
     custom_static_assert
 
-#include <nolibc/extensions/stringify.h>
-#include <assert.h>
-#include <stdbool.h>
-#include <string.h>
+#include <helpers.h>
+#include nolibc_header(nolibc/extensions/stringify.h)
+#include nolibc_header(assert.h)
+#include nolibc_header(stdbool.h)
+#include nolibc_header(string.h)
 
 static inline bool
 does_expand_to_expected_macro(

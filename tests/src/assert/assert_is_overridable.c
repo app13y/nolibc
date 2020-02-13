@@ -1,8 +1,10 @@
 #define NOLIBC_OVERRIDE_ASSERT
 
-#include <nolibc/predefined/build_flavour.h>
-#include <assert.h>
-#include <stdbool.h>
+#include <helpers.h>
+#include nolibc_header(nolibc/extensions/unmangled.h)
+#include nolibc_header(nolibc/predefined/build_flavour.h)
+#include nolibc_header(assert.h)
+#include nolibc_header(stdbool.h)
 
 static int number_of_calls = 0;
 

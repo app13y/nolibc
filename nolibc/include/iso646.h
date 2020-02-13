@@ -38,7 +38,7 @@
 
 #if !defined not_eq && !defined NOLIBC_NO_NOT_EQ
     #define not_eq \
-        ~=
+        !=
 
 #endif
 

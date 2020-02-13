@@ -1,5 +1,6 @@
-#include <string.h>
-#include <stdbool.h>
+#include <helpers.h>
+#include nolibc_header(string.h)
+#include nolibc_header(stdbool.h)
 
 static inline bool
 does_fill_buffer(

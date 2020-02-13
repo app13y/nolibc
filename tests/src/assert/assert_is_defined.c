@@ -1,5 +1,6 @@
-#include <assert.h>
-#include <stdbool.h>
+#include <helpers.h>
+#include nolibc_header(assert.h)
+#include nolibc_header(stdbool.h)
 
 int main(
     void

@@ -1,5 +1,6 @@
-#include <stddef.h>
-#include <stdbool.h>
+#include <helpers.h>
+#include nolibc_header(stddef.h)
+#include nolibc_header(stdbool.h)
 
 static inline bool
 is_null_defined(

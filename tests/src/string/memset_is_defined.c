@@ -1,4 +1,5 @@
-#include <string.h>
+#include <helpers.h>
+#include nolibc_header(string.h)
 
 int main(
     void
